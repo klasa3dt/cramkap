@@ -12,6 +12,7 @@ target_compile_features(cramkap PRIVATE cxx_std_20)
 add_subdirectory(vendor/raylib)
 
 target_link_libraries(cramkap PRIVATE raylib)
+target_include_directories(cramkap PRIVATE vendor/raygui/)
 
 if(WIN32)
     target_link_libraries(cramkap PRIVATE ws2_32.lib)
